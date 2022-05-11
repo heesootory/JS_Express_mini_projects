@@ -1,0 +1,11 @@
+doctype html 
+html(lang = "ko")
+    head    
+        title #{pageTitle} | Wetube
+    body
+        h1=pageTitle
+            form(action = "filter", method = "GET")
+                input(name = "year", placeholder ="filter by year", type = "text")
+                input(name = "rating", placeholder ="filter by rating", type = "text")
+                input(type = "submit", value = "search")
+        block content
