@@ -1,0 +1,7 @@
+extends base.pug
+include mixins/movieList
+
+block content 
+    each movie in movies 
+        +movieList(movie)
+    

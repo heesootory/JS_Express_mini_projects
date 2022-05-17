@@ -1,0 +1,20 @@
+extends base.pug
+
+block content 
+    div 
+        h2=movie.title
+        ul 
+            li 
+                p=`summary : ${movie.summary}`
+            li
+                span=`year : ${movie.year}`
+            li
+                span=`평점 : ${movie.rating}`
+            li
+                small=`장르 : ${movie.genres}`
+        br
+        a(href =`${movie.id}/edit`) Edit Movie Detail 
+        br
+        a(href=`${movie.id}/delete`) Delete Movie        
+
+            

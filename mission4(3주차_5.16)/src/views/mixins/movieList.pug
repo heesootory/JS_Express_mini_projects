@@ -1,0 +1,8 @@
+mixin movieList(movie)
+    div 
+        h3 
+            a(href=`/movies/${movie.id}`)=movie.title
+        h4=`평점: ${movie.rating}`
+        small=movie.genres
+
+        hr

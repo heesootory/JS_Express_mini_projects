@@ -1,0 +1,11 @@
+extends base.pug
+include mixins/movieList
+
+block content 
+    form(method = "GET")
+        input(name = "key_title", placeholder = "Search by title", type = "text")
+        input(name = "key_rating", placeholder = "Search by rating", type = "text")
+        input(type = "submit", value ="Search!")
+
+    each movie in found_movies
+        +movieList(movie)

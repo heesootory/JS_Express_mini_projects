@@ -1,0 +1,10 @@
+extends base.pug
+
+block content 
+    form(method = "POST")
+        input(name = "title", placeholder = "Title", required, type = "text", maxlength = 20, value = movie.title)
+        input(name = "summary", placeholder = "Summary", type = "text", maxlength = 500, value = movie.summary)
+        input(name = "year", placeholder = "Year", type = "number", required, value = movie.year)
+        input(name = "genres", placeholder = "Genres, Please Write genres seprated by comma", required, type = "text", value = movie.genres.join())
+        input(name = "rating", placeholder= "Rating", type = "number", min = 1, max = 5, required, value = movie.rating)
+        input(type= "submit", value = "Upload Movie")
