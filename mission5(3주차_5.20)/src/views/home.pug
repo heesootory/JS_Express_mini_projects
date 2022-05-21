@@ -1,0 +1,13 @@
+extends templates/layout
+
+block content
+    h1=pageTitle 
+    nav 
+        ul 
+            li 
+                a(href = "/join") Join 
+            li 
+                a(href = "/login") Login
+            if loggedIn 
+                li 
+                    a(href = "/profile") This is #{loggedInUser.name}

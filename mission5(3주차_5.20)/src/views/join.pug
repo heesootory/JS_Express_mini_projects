@@ -1,0 +1,12 @@
+extends templates/layout
+
+
+block content
+    h1=pageTitle 
+    if errorMessage 
+        span=errorMessage
+    form(method = "POST")
+        input(name = "name", type= "text", required, placeholder = "name")
+        input(name = "username", type= "text", required, placeholder = "username")
+        input(name = "password", type= "text", required, placeholder = "password")
+        input(type = "submit", value = "Join")
