@@ -46,3 +46,12 @@
 # mission 4
 ![img](/img/mission4.PNG)
 
+
+
+
+
+
+
+# mission 6
+![img](/img/mission6-1.PNG)
+![img](/img/mission6-2.PNG)
