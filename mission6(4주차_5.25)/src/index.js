@@ -9,26 +9,31 @@ const app = express();
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use("/uploads", express.static("uploads"))
 
+app.use("/uploads", express.static("uploads"))
 const textRouter = express.Router();
 
 const textUpload = multer({ dest : "uploads" });
 
 const getText = (req, res) => {
     fs.readdir('uploads', (err, files) =>{
-        console.log(files);
+        if(err){
+            console.log(err);
+            throw err;
+        }
+        //console.log(files);
         return res.render("read", {pageTitle: "TXT to HTML", files});
     });
-    
 } 
 
 const postText = (req, res) =>{
     const file = req.file;
     //console.log(file);
     fs.readFile( file.path,'utf8', (err, data) => {
-        //if(err) throw err;
-        console.log(data);
+        if(err){
+            console.log(err);
+            throw err;
+        }
         return res.render("seefile", {data});
     });
 }
@@ -37,6 +42,10 @@ const readText = (req, res) =>{
     const { id } = req.params;
     //console.log(id);
     fs.readFile(`uploads/${id}`, 'utf8', (err, data)=>{
+        if(err){
+            console.log(err);
+            throw err;
+        }
         return res.render("seefile", {data});
     });
 }

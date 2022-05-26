@@ -55,3 +55,12 @@
 # mission 6
 ![img](/img/mission6-1.PNG)
 ![img](/img/mission6-2.PNG)
+
+
+## 해설
+
+![img](/img/m6-3.PNG)
+![img](/img/m6-4.PNG)
+![img](/img/m6-5.PNG)
+![img](/img/m6-6.PNG)
+
